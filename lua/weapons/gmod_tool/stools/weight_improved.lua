@@ -295,7 +295,7 @@ if CLIENT then
         cpanel:AddControl( "Label", { Text = "Modifies the weight of an entity" } )
         cpanel:AddControl( "ComboBox", presets )
         cpanel:ControlHelp( "" )
-        cpanel:AddControl( "Slider", { Label = "Weight: ", Command = "weight_improved_mass", Type = "Float", Min = "0.02", Max = MAX_WEIGHT } )
+        cpanel:AddControl( "Slider", { Label = "Weight: ", Command = "weight_improved_mass", Min = "1", Max = MAX_WEIGHT } )
         cpanel:ControlHelp( "" )
         cpanel:AddControl( "ComboBox", colors )
         cpanel:ControlHelp( "" )
