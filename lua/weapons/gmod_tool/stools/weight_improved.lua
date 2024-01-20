@@ -44,15 +44,15 @@ TOOL.Information = {
     "reload"
 }
 
-TOOL.ClientConVar["mass"] = "1"
-TOOL.ClientConVar["tooltip_show"] = "0"
-TOOL.ClientConVar["tooltip_legacy"] = "0"
-TOOL.ClientConVar["tooltip_scale"] = "24"
-TOOL.ClientConVar["colorscale"] = "1"
-TOOL.ClientConVar["rounded"] = "1"
-TOOL.ClientConVar["decimals"] = "2"
-TOOL.ClientConVar["notifs"] = "1"
-TOOL.ClientConVar["notifs_sound"] = "1"
+TOOL.ClientConVar.mass = "1"
+TOOL.ClientConVar.tooltip_show = "0"
+TOOL.ClientConVar.tooltip_legacy = "0"
+TOOL.ClientConVar.tooltip_scale = "24"
+TOOL.ClientConVar.colorscale = "1"
+TOOL.ClientConVar.rounded = "1"
+TOOL.ClientConVar.decimals = "2"
+TOOL.ClientConVar.notifs = "1"
+TOOL.ClientConVar.notifs_sound = "1"
 
 function TOOL:GetMass()                return self:GetClientNumber( "mass" ) end
 function TOOL:ShouldUseLegacyTooltip() return self:GetClientNumber( "tooltip_legacy" ) == 1 end
