@@ -2,7 +2,10 @@ module( "improvedweight", package.seeall )
 
 function Setup( ent )
     local entTbl = ent:GetTable()
-    local mass = ent:GetPhysicsObject():GetMass()
+    local phys = ent:GetPhysicsObject()
+    if not IsValid( phys ) then return end
+
+    local mass = phys:GetMass()
     entTbl.ImprovedWeight = {
         Original = mass,
         Modified = mass,
@@ -66,6 +69,8 @@ function SetMass( _, ent, data )
     if ( not IsSetup( ent ) ) then Setup( ent ) end
 
     local phys = ent:GetPhysicsObject()
+    if not IsValid( phys ) then return end
+
     phys:SetMass( data.Mass )
     duplicator.StoreEntityModifier( ent, "mass", data )
 end
