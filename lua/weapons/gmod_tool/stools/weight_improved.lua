@@ -348,6 +348,9 @@ if SERVER then
         local ent = net.ReadEntity()
         if not IsValid( ent ) then return end
 
+        local phys = ent:GetPhysicsObject()
+        if not IsValid( phys ) then return end -- No physics object means it wont have any weight.
+
         improvedweight.SetNWVars( ent )
     end )
 end
